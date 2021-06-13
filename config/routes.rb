@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  root to: 'pnl#index'
+  devise_for :users, :controllers => {
+    sessions: 'users/sessions'
+  }
+  
+  devise_scope :user do
+    root to: 'devise/sessions#new'
+  end
+  
+  get 'index', to: 'pnl#index'
   get 'pnl/show'
   get 'pnl/new'
   get 'pnl/about'

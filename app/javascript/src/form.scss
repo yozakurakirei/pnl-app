@@ -1,0 +1,71 @@
+.main-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    jyustify-content: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.form-area {
+    width: 100%;
+    display: flex;
+    jyustify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: .5rem;
+        .field-label {
+           font-size: .8rem;
+           margin-bottom: .5rem;
+           text-align: left;
+        }
+        .field-input {
+            width: 400px;
+            height: 2rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: .5rem;
+            font-size: 1.2rem;
+        }
+        .field-btn {
+            width: 400px;
+            height: 3rem;
+            display: inline-block;
+            border-radius: 5px;
+            border: none;
+            font-size: 1.2rem;
+            padding: .5rem;
+            background-color: #4fc08d;
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+                background: #379e6f;
+                transition: .5s;
+            }
+        }
+    }
+    .field-remember {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        jyustify-content: center;
+        .remember-check {
+            margin-right: 1rem;
+        }
+    }
+}
+
+.field-text {
+    margin-top: 1rem;
+    a {
+        color: #555;
+        margin-bottom: .5rem;
+        text-decoration: none;
+    }
+}
