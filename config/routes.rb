@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     root to: 'devise/sessions#new'
   end
   
-  get '/mypage', to: 'pnl#index'
+  get '/index', to: 'pnl#index'
   get 'pnl/show'
   get 'pnl/new'
   get '/about', to: 'pnl#about'
