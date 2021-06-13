@@ -1,29 +1,38 @@
-<h2>Sign up</h2>
+<h2>アカウント作成</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+<div class="form-area">
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :name, "お名前", class: "field-label" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "field-input", placeholder: "お名前" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.label :email, "メールアドレス", class: "field-label" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-input", placeholder: "メールアドレス" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password, "パスワード", class: "field-label" %>
+    <%#<% if @minimum_password_length %>
+    <%#<em>(<%= @minimum_password_length  文字以上)</em>%>
+    <%#<% end %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "field-input", placeholder: "パスワード（6文字以上）"%>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="field">
+    <%= f.label :password_confirmation, "パスワードの確認", class: "field-label" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "field-input", placeholder: "パスワードの確認" %>
+  </div>
+
+  <div class="field">
+    <%= f.submit "アカウント作成", class: "field-btn" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+  <div class="field-text">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

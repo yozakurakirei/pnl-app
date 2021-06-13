@@ -1,18 +1,20 @@
 <header>
     <div class="header-area">
         <div class="header-logo">
-            <%= image_pack_tag 'media/images/logo.png' %>
+            <%= link_to root_path do%>
+                <%= image_pack_tag 'media/images/logo.png' %>
+            <% end %>
         </div>
         <div class="header-list">
             <ul class="header-right">
-                <li>使い方</li>
-                <li>検索する</li>
-                <li>お問い合わせ</li>
-                <!--<% if user_signed_in? %>-->
-                <!--    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>-->
-                <!--<% else %>-->
-                <!--    <%= link_to 'ログイン', new_user_session_path %>-->
-                <!--<% end %>-->
+                <li><%= link_to "使い方", about_path %></li>
+                <li><%= link_to "検索する", about_path %></li>
+                <li><%= link_to "お問い合わせ", about_path %></li>
+                <% if user_signed_in? %>
+                    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                    <li><%= link_to 'ログイン', new_user_session_path %></li>
+                <% end %>
             </ul>
         </div>
     </div>
