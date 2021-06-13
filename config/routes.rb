@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'pnl/show'
   get 'pnl/new'
   get '/about', to: 'pnl#about'
-  get 'pnl/destroy'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/contact', to: 'pnl#contact'
+ 
+  resources :posts
 end

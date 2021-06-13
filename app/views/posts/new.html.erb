@@ -1,0 +1,18 @@
+<h1>入力ページ</h1>
+<p>社員通用口の入力ページになります。</p>
+
+<%= form_with(model: @post, local: true) do |f| %>
+
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title, placeholder: "タイトル" %>
+    
+    <%= f.label :area, "エリア" %>
+    <%= f.text_field :area, placeholder: "施設所在地" %>
+    
+    <%= f.label :name, "施設名" %>
+    <%= f.text_field :name, placeholder: "施設名" %>
+    
+    <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
+    
+    <%= f.submit "投稿する"  %>
+<% end %>

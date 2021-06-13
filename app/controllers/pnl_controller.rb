@@ -11,6 +11,6 @@ class PnlController < ApplicationController
   def about
   end
 
-  def destroy
+  def contact
   end
 end
