@@ -2,6 +2,7 @@ header {
     width: 100%;
     padding: .5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fff;
     .header-area {
         display: flex;
         align-items: center;
@@ -40,4 +41,15 @@ header {
              }   
         }
     }
+}
+
+// footer
+footer {
+    width: 100%;
+    background-color: #fff;
+}
+.pnl-logo {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: right;
+    padding: 1rem;
 }

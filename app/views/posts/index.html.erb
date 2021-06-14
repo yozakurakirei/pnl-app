@@ -1,2 +1,19 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class="index-title">
+    <h1>社員通用口一覧</h1>
+    <p>Find me in app/views/posts/index.html.erb</p>
+</div>
+    
+<div class="index-area">
+    <% @posts.each do |post| %>
+        <%= link_to post_path(post) do %>
+        <div class="index-card">
+            <div class="index-image">
+                <%= image_tag post.display_image if post.image.attached? %>
+            </div>
+            <div class="index-dsc">
+                <%= post.title.truncate(20) %>
+            </div>
+        </div>
+        <% end %>
+    <% end %>
+</div>
