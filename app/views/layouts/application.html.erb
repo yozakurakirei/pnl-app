@@ -14,6 +14,7 @@
   <body>
     <%= render 'layouts/header' %>
     
+    <div class="main-contents">
     <!-- flash-->
     <% if flash[:notice] %>
       <p class="notice"><%= notice %></p>
@@ -23,7 +24,7 @@
       <p class="alert"><%= alert %></p>
     <% end %>  
       
-    <div class="main-contents">
+    
       <%= yield %>
     </div>
     

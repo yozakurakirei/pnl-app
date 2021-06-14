@@ -1,21 +1,40 @@
-<h1>入力ページ</h1>
-<p>社員通用口の入力ページになります。</p>
+<div class="input-area">
+    <div class="input-title">
+        <h1>入力ページ</h1>
+        <p>社員通用口の入力ページになります。</p>
+    </div>
 
-<%= form_with(model: @post, local: true) do |f| %>
-
-    <%= f.label :title, "タイトル" %>
-    <%= f.text_field :title, placeholder: "タイトル" %>
-    
-    <%= f.label :area, "エリア" %>
-    <%= f.text_field :area, placeholder: "施設所在地" %>
-    
-    <%= f.label :name, "施設名" %>
-    <%= f.text_field :name, placeholder: "施設名" %>
-    
-    <%= f.label :content, "テキストエリア" %>
-    <%= f.rich_text_area :content, placeholder: "従業員口を書いてください" %>
-    
-    <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
-    
-    <%= f.submit "投稿する"  %>
-<% end %>
+    <%= form_with(model: @post, local: true) do |f| %>
+    <div class="input-content">
+        
+        <div class="input-item">
+            <div class="input-label"><%= f.label :title, "タイトル" %></div>
+            <div class="input-form"><%= f.text_field :title, placeholder: "タイトル" %></div>
+        </div>
+        
+        <div class="input-item">
+            <div class="input-label"><%= f.label :area, "エリア" %></div>
+            <div class="input-form"><%= f.text_field :area, placeholder: "施設所在地" %></div>
+        </div>
+        
+        <div class="input-item">
+            <div class="input-label"><%= f.label :name, "施設名" %></div>
+            <div class="input-form"><%= f.text_field :name, placeholder: "施設名" %></div>
+        </div>
+        
+        <div class="input-item">
+            <div class="input-label"><%= f.label :image, "トップ画像" %></div>
+            <div class="input-form"><%= f.file_field :image, accept: "image/jpeg, image/gif, image/png" %></div>
+        </div>
+        
+        <div class="input-rich">
+            <div class="input-rich-label"><%= f.label :content, "テキストエリア" %></div>
+            <div class="input-rich-form"><%= f.rich_text_area :content, placeholder: "従業員口を書いてください" %></div>
+        </div>
+        
+        <div class="input-btn">
+            <%= f.submit "投稿する", class:"input-buttom" %>
+        </div>
+    <% end %>
+    </div>  
+</div>

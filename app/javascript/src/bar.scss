@@ -16,15 +16,28 @@ header {
         }
     }
     .header-list {
-        flex: 1;
-        .header-right {
+        flex: 2;
+        align-items: center;
+        jyustify-content: center;
+        .header-center {
             display: flex;
             align-items: center;
-            jyustify-content: flex-end;
+            jyustify-content: center;
             li {
                 list-style: none;
                 margin-right: 1.7rem;
             }
+        }
+    }
+    .header-right {
+        flex: 1;
+        align-items: center;
+        jyustify-content: flex-end;
+        .header-right-list {
+            
+             li {
+                 list-style: none;
+             }   
         }
     }
 }
