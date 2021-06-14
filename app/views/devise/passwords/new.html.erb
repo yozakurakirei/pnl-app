@@ -1,10 +1,14 @@
-<h2>パスワードをお忘れですか？</h2>
-<p>登録済みのメールアドレスにパスワードリセットメールをお送りいたします。</p>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="form-area">
+  <div class="form-title">
+    <h2>パスワードをお忘れですか？</h2>
+    <p>登録済みのメールアドレスにパ.スワードリセットメールをお送りいたします。</p>
+  </div>
+
+  
   <div class="field">
     <%= f.label :email, "登録しているメールアドレス", class: "field-label" %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "登録しているメールアドレス", class: "field-input" %>

@@ -1,0 +1,21 @@
+.post-show {
+    display: flex;
+    align-items: center;
+    jyustify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    .post-show-title {
+        margin-top: 2rem;
+    }
+    .post-top-image {
+        width: 100%;
+        height: 350px;
+        jyustify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+}

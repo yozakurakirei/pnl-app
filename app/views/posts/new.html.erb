@@ -12,6 +12,9 @@
     <%= f.label :name, "施設名" %>
     <%= f.text_field :name, placeholder: "施設名" %>
     
+    <%= f.label :content, "テキストエリア" %>
+    <%= f.rich_text_area :content, placeholder: "従業員口を書いてください" %>
+    
     <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
     
     <%= f.submit "投稿する"  %>

@@ -10,6 +10,10 @@ class Post < ApplicationRecord
                                     message: "投稿できるのは .jpeg .gif .pngになります。"},
                             size: { less_than: 5.megabytes,
                                     message: "投稿できるのは、5MBまでになります。"}
+  validates :content, presence: true, length: { maximum: 2000}
+  
+  has_rich_text :content
+
 
   def display_image
     image.variant(resize_to_limit: [500,500])
